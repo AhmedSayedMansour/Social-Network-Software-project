@@ -5,7 +5,7 @@ public class Page {
     private String name;
     private int numberOfLikes = 0;
     private ArrayList<User> followers = new ArrayList<>();
-    private ArrayList<Post> posts = new ArrayList<Post>();
+    private ArrayList<Post> posts = new ArrayList<>();
 
     public int getPageID() {
         return pageID;

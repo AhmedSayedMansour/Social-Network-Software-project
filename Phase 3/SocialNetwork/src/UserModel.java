@@ -44,28 +44,28 @@ public class UserModel {
         return 0;
     }
 
-    public int checkUserExistence(String userID) {
+    public int checkUserExistence(int userID) {
         for(int i=0 ; i<normalUsers.size() ; ++i){
-            if (normalUsers.get(i).getUserID().equals(userID) ){
+            if (normalUsers.get(i).getUserID() == userID ){
                 return 1;
             }
         }
         for(int i=0 ; i<premiumUsers.size() ; ++i){
-            if (premiumUsers.get(i).getUserID().equals(userID) ){
+            if (premiumUsers.get(i).getUserID() == userID ){
                 return 2;
             }
         }
         return 0;
     }
 
-    public User getUser(String userID) {
+    public User getUser(int userID) {
         for(int i=0 ; i<normalUsers.size() ; ++i) {
-            if (normalUsers.get(i).getUserID().equals(userID)) {
+            if (normalUsers.get(i).getUserID() == userID) {
                 return normalUsers.get(i);
             }
         }
         for(int i=0 ; i<premiumUsers.size() ; ++i) {
-            if (premiumUsers.get(i).getUserID().equals(userID)) {
+            if (premiumUsers.get(i).getUserID() == userID) {
                 return premiumUsers.get(i);
             }
         }

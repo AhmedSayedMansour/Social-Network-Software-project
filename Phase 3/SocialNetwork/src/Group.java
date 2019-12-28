@@ -7,7 +7,6 @@ public class Group {
     private ArrayList<User> members = new ArrayList<>();
     private ArrayList<User> admins = new ArrayList<>();
     private ArrayList<Post> posts = new ArrayList<>();
-    private ArrayList<User> requests = new ArrayList<>();
 
     public int getGroupID() {
         return groupID;

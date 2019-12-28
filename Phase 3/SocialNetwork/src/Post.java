@@ -1,7 +1,7 @@
 public class Post {
     int postID;
     private String content;
-    private Hashtag hashtag = new Hashtag();
+    private HashTag hashTag = new HashTag();
 
     public String getContent() {
         return content;
@@ -11,12 +11,12 @@ public class Post {
         this.content = content;
     }
 
-    public Hashtag getHashtag() {
-        return hashtag;
-    }
+    public int getPostID() { return postID; }
 
-    public void setHashtag(Hashtag hashtag) {
-        this.hashtag = hashtag;
-    }
+    public void setPostID(int postID) { this.postID = postID; }
+
+    public HashTag getHashTag() { return hashTag; }
+
+    public void setHashTag(HashTag hashtag) { this.hashTag = hashtag; }
 
 }

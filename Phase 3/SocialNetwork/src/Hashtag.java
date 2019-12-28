@@ -1,5 +1,5 @@
-public class Hashtag {
-    private String content;
+public class HashTag {
+    private String content = "";
 
     public void setContent(String content) {
         this.content = content;
@@ -7,6 +7,5 @@ public class Hashtag {
     public String getContent() {
         return content;
     }
-
 
 }

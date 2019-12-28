@@ -36,8 +36,7 @@ public class Main {
                 signUp.setUserName(input.nextLine());
                 System.out.println("Enter your password :");
                 signUp.setPassword(input.nextLine());
-                System.out.println("Enter your ID :");
-                signUp.setUserID(input.nextLine());
+                signUp.setUserID(userModel.getNormalUsers().size()+userModel.getPremiumUsers().size());
                 System.out.println("Enter your Email :");
                 signUp.setEmail(input.nextLine());
                 System.out.println("Enter your Country :");
@@ -78,7 +77,7 @@ public class Main {
             c = input.nextLine();
             if(c.equals("1")){
                 System.out.println("Enter ID of User:");
-                if(normalUserController.sendFriendRequest(currentUser,input.nextLine())){
+                if(normalUserController.sendFriendRequest(currentUser,Integer.parseInt(input.nextLine()))){
                     System.out.println("Friend request sent");
                 }
                 else{

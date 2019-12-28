@@ -10,7 +10,7 @@ public abstract class UserController {
 
     public Boolean signUp(User newUser) {
         if(newUser.getUserName() != null && newUser.getPassword() != null && newUser.getEmail() != null && newUser.getCountry()!= null && newUser.getDateOfBirth() != null && newUser.getGender() != null) {
-            if(userModel.checkUserExistence(newUser.getUserName())==0){
+            if(userModel.checkUserExistence(newUser.getUserID())==0){
                 this.userModel.createUser(newUser);
                 return true;
             }
@@ -25,15 +25,15 @@ public abstract class UserController {
         return userModel.checkUserExistence(userName,password);
     }
 
-    public Boolean search(String userID) {
+    public Boolean search(int userID) {
         return userModel.checkUserExistence(userID) > 0;
     }
 
-    public boolean sendFriendRequest(User user1, String userID) {
+    public boolean sendFriendRequest(User user1, int userID) {
         User user2 = new User();
         FriendRequest request = new FriendRequest(user1 , userModel.getUser(userID));
         if(userModel.checkUserExistence(userID) <= 0)   return false;
-        if(!userModel.isFriends(user1,userModel.getUser(userID)) && !user1.getUserID().equals(userModel.getUser(userID).getUserID())){
+        if(!userModel.isFriends(user1,userModel.getUser(userID)) && user1.getUserID()!=userModel.getUser(userID).getUserID()){
             userModel.addToFriendRequests(userModel.getUser(userID),request);
             return true;
         }

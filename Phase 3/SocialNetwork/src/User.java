@@ -2,7 +2,7 @@ import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 
 public class User {
-    private String userID;
+    private int userID;
     private String userName;
     private String password;
     private String email;
@@ -16,7 +16,7 @@ public class User {
 
 
 
-    public User(String userID, String userName, String password, String email, String gender, String country, String dateOfBirth) {
+    public User(int userID, String userName, String password, String email, String gender, String country, String dateOfBirth) {
         this.userID = userID;
         this.userName = userName;
         this.password = password;
@@ -29,13 +29,11 @@ public class User {
     }
 
 
-    public String getUserID() {
+    public int getUserID() {
         return userID;
     }
 
-    public void setUserID(String userID) {
-        this.userID = userID;
-    }
+    public void setUserID(int userID) {  this.userID = userID; }
 
     public String getUserName() {
         return userName;
