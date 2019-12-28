@@ -7,5 +7,4 @@ public class HashTag {
     public String getContent() {
         return content;
     }
-
 }

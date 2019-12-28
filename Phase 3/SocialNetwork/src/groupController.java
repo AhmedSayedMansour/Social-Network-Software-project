@@ -1,5 +1,13 @@
 public abstract class groupController {
 
+    private UserModel userModel = new UserModel();
+    groupController(UserModel userModel){
+        this.userModel = userModel;
+    }
+
+    public UserModel getUserModel() { return userModel; }
+    public void setUserModel(UserModel userModel) { this.userModel = userModel; }
+
     public void createGroup(Group group){}
     public void removeGroup(int groupID){}
     public void changeName(int groupID , String newName){}

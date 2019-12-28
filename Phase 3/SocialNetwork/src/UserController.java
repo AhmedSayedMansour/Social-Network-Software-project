@@ -1,6 +1,88 @@
+import java.util.ArrayList;
+
 public abstract class UserController {
 
     private UserModel userModel = new UserModel();
+    private messageModel messageModel = new messageModel();
+    private postModel postModel = new postModel();
+    private PageModel pageModel = new PageModel();
+    private messageController messageController = new messageController(messageModel);
+    private postController postController = new postController(postModel);
+    private publicGroupController publicGroupController = new publicGroupController(userModel);
+    private privateGroupController privateGroupController = new privateGroupController(userModel);
+    private PageController pageController = new PageController(pageModel);
+
+    public UserModel getUserModel() {
+        return userModel;
+    }
+
+    public void setUserModel(UserModel userModel) {
+        this.userModel = userModel;
+    }
+
+    public messageModel getMessageModel() {
+        return messageModel;
+    }
+
+    public void setMessageModel(messageModel messageModel) {
+        this.messageModel = messageModel;
+    }
+
+    public postModel getPostModel() {
+        return postModel;
+    }
+
+    public void setPostModel(postModel postModel) {
+        this.postModel = postModel;
+    }
+
+    public PageModel getPageModel() {
+        return pageModel;
+    }
+
+    public void setPageModel(PageModel pageModel) {
+        this.pageModel = pageModel;
+    }
+
+    public messageController getMessageController() {
+        return messageController;
+    }
+
+    public void setMessageController(messageController messageController) {
+        this.messageController = messageController;
+    }
+
+    public postController getPostController() {
+        return postController;
+    }
+
+    public void setPostController(postController postController) {
+        this.postController = postController;
+    }
+
+    public publicGroupController getPublicGroupController() {
+        return publicGroupController;
+    }
+
+    public void setPublicGroupController(publicGroupController publicGroupController) {
+        this.publicGroupController = publicGroupController;
+    }
+
+    public privateGroupController getPrivateGroupController() {
+        return privateGroupController;
+    }
+
+    public void setPrivateGroupController(privateGroupController privateGroupController) {
+        this.privateGroupController = privateGroupController;
+    }
+
+    public PageController getPageController() {
+        return pageController;
+    }
+
+    public void setPageController(PageController pageController) {
+        this.pageController = pageController;
+    }
 
     UserController(UserModel userModel){
         this.userModel = userModel;
