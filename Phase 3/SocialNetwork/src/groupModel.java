@@ -1,4 +1,3 @@
-import java.security.cert.CRLReason;
 import java.util.ArrayList;
 
 public class groupModel {
@@ -8,7 +7,7 @@ public class groupModel {
     public void createGroup(Group group){}
     public void deleteGroup(Group group){}
     public Group readGroup(int groupID)
-    {   
+    {
         Group ret = new Group();
         return ret;
     }

@@ -1,8 +1,6 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class testing {
     public User currentUser = new User(0, "Ahmed", "2020", "gmail", "Male", "Giza", "20/7/1999");
     public User currentUser2 = new User(1, "Hema", "5050", "gmail", "Male", "Giza", "30/8/1999");

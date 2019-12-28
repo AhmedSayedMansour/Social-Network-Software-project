@@ -6,7 +6,7 @@ public class privateGroupController extends groupController {
     public void requestToJoinGroup(int groupID , groupRequest request){}
     public void acceptRequest(int groupID,int requestNumber){}
     public void removeRequest(int groupID,int requestNumber){}
-    public void leaveGroup(User user,int groupID){}
+    public void leaveGroup(User user, int groupID){}
     public void showRequests(int groupID){}
 
 }
