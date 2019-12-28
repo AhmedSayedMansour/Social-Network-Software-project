@@ -6,7 +6,6 @@ public class userMessage extends  Message{
     public ArrayList<User> getReceivers() {
         return receivers;
     }
-
     public void setReceivers(ArrayList<User> receivers) {
         this.receivers = receivers;
     }

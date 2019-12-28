@@ -2,10 +2,19 @@ import java.util.ArrayList;
 
 public class Page {
     private int pageID;
-    private String name;
     private int numberOfLikes = 0;
+    private String name;
     private ArrayList<User> followers = new ArrayList<>();
     private ArrayList<Post> posts = new ArrayList<>();
+    private ArrayList<User> Admins = new ArrayList<>();
+
+    public ArrayList<User> getAdmins() {
+        return Admins;
+    }
+
+    public void setAdmins(ArrayList<User> admins) {
+        Admins = admins;
+    }
 
     public int getPageID() {
         return pageID;

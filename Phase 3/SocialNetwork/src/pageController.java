@@ -1,4 +1,18 @@
-public class pageController {
+public class PageController {
+
+    private PageModel pageModel = new PageModel();
+
+    public PageController(PageModel pageModel) {
+        this.pageModel = pageModel;
+    }
+
+    public PageModel getPageModel() {
+        return pageModel;
+    }
+
+    public void setPageModel(PageModel pageModel) {
+        this.pageModel = pageModel;
+    }
 
     public void createPage(Page page){}
     public void removePage(int pageID){}
