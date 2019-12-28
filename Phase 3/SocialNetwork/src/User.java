@@ -1,3 +1,4 @@
+import java.awt.image.AreaAveragingScaleFilter;
 import java.util.ArrayList;
 
 public class User {
@@ -5,6 +6,15 @@ public class User {
     private String userName;
     private String password;
     private String email;
+    private String gender;
+    private String country;
+    private String dateOfBirth;
+    private ArrayList<User> friends = new ArrayList<>();
+    private ArrayList<FriendRequest> friendRequests = new ArrayList<>();
+    private ArrayList<Post> posts = new ArrayList<>();
+    private ArrayList<Message> messages = new ArrayList<>();
+
+
 
     public User(String userID, String userName, String password, String email, String gender, String country, String dateOfBirth) {
         this.userID = userID;
@@ -18,11 +28,6 @@ public class User {
     public User(){
     }
 
-    private String gender;
-    private String country;
-    private String dateOfBirth;
-    private ArrayList<User> friends = new ArrayList<>();
-    private ArrayList<FriendRequest> friendRequests = new ArrayList<>();
 
     public String getUserID() {
         return userID;
@@ -106,6 +111,22 @@ public class User {
 
     public void removeFromFriendRequests(FriendRequest user1){
         friendRequests.remove(user1);
+    }
+
+    public ArrayList<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(ArrayList<Post> posts) {
+        this.posts = posts;
+    }
+
+    public ArrayList<Message> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(ArrayList<Message> messages) {
+        this.messages = messages;
     }
 
 }
